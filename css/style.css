@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Source+Serif+Pro:wght@600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.divider {
+    background-image: 
+    linear-gradient(to right, rgba(22, 7, 7, 0.466),rgba(12, 1, 1, 0.404));
+    height: .6em;
+    width: 50%;
+    border-radius: 2em;
+    align-self: center;
+}
+
+.special-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+    height: max-content;
+    padding: 4em 1em;
+    margin: 2.5em 0;
+    font-weight: 700;
+    border: solid 1px rgba(255,255,255,0.3);
+    color: white;
+    background:
+    linear-gradient(to right, rgba(22, 7, 7, 0.8), rgba(12, 1, 1, 0.377)),  
+    url(/images/specials-image.jpg) no-repeat center;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+}
+
+.special-offer p {
+    max-width: 10em;
+    font-size: clamp(1.8rem, 1.5333rem + 1.1852vw, 2.6rem);
+    text-align: center;
+}
+
+form {
+    justify-self: stretch;
+}
+
+label {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.field {
+    padding: .6em .3em;
+    border-radius: .8em;
+    border: solid 2px rgba(255,255,255,.7);
+    background-color: transparent;
+    color: white;
+    backdrop-filter: blur(2px);
+}
+
+.field:focus,
+.field:active {
+    border: solid 2px #FF6666;
+}
+
+/* Navigation styles */
+.logo {
+    background: white;
+    height: 230px;
+    background-image: url(../images/jakes-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    background-color: rgb(15, 6, 6);
+    padding: 20px;
+}
+
+.left,
+.center,
+.right {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left,
+.right {
+    width: 25%;
+}
+
+.center {
+    width: 50%;
+}
+
+.center a {
+    color: white;
+    padding: .8em 1em;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: solid 2px transparent;
+    transition: border-bottom ease .4s;
+}
+
+.center a:hover {
+    border-bottom: solid 2px white;
+}
+
+.btn {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    padding: 1em 2em;
+    border-radius: 1.2em;
+    transition: 
+        background-color ease .4s,
+        transform ease .4s,
+        box-shadow ease .4s;
+}
+
+.btn-sml {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: .6em 1.5em;
+    border-radius: .8em;
+    transition: 
+        background-color ease .4s,
+        transform ease .4s,
+        box-shadow ease .4s;
+}
+
+.btn-lg {
+    font-size: 18px;
+    padding: 1.2em 2.6em;
+    border-radius: 1.2em;
+    transition: 
+        background-color ease .4s,
+        transform ease .4s,
+        box-shadow ease .4s;
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: #FF6666;
+    border: solid 2px #FF6666;
+}
+
+.btn-primary:hover {
+    background-color: rgb(43, 22, 22);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px 0 rgb(153, 18, 18);
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: solid 2px rgba(255,255,255,0.6);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(24, 31, 34);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px 0 rgb(122, 176, 197, 0.7);
+    cursor: pointer;
+}
+
+.btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+/* Column styles */
+.column {
+    display: flex;
+    flex-direction: column;
+    height: 1200px;
+    width: 100%;
+    max-width: 800px;
+    margin: 45px auto;
+    gap: 2.5em;
+    padding: 0 1em;
+}
+
+.column-title {
+    font-size: clamp(1.7rem, 1.5333rem + 0.7407vw, 2.2rem);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgb(43, 22, 22);
+    text-align: center;
+}
+
+.meal1,
+.meal2,
+.meal3 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: .6em;
+    overflow: hidden;
+}
+
+.meal1 {
+    background-image: url("../images/steak.png");
+}
+
+.meal2 {
+    background-image: url("../images/soup.png");
+}
+
+.meal3 {
+    background-image: url("../images/cheesecake.png");
+}
+
+.meal-inner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    background: rgba(26, 8, 8, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: .6em .6em 0 0;
+}
+
+.text {
+    width: 60%;
+    color: white;
+}
+
+.text p {
+    color: rgba(255,255,255,0.7);
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.text h1 {
+    font-family: 'Source Serif Pro', serif;
+}
+/* Footer Styles */
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 80px 0;
+    gap: 25px;
+}
+
+.footer .divider {
+    background-color: rgba(255,255,255,.3);
+    height: .2em;
+    width: 10%;
+    border-radius: 2em;
+}
+
+.social-links {
+    display: flex;
+    gap: 40px;
+}
+
+.fb,
+.tw,
+.ig {
+    text-decoration: none;
+    border: solid 2px rgba(255,255,255,0.7);
+    padding: 15px;
+    transition: 
+        background-color ease .4s,
+        transform ease .4s,
+        box-shadow ease .4s;
+    border-radius: .8em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.fb {
+    color: skyblue;
+}
+
+.tw {
+    color: yellow;
+}
+
+.ig {
+    color: red;
+}
+
+.fb:hover {
+    background-color: rgb(24, 31, 34);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px 0 rgb(122, 176, 197, 0.7); 
+}
+
+.tw:hover {
+    background-color: rgb(37, 37, 21);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px 0 rgb(117, 117, 17);
+}
+
+.ig:hover {
+    background-color: rgb(43, 22, 22);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px 0 rgb(153, 18, 18);
+}
+
+.copyright {
+    color: rgba(255,255,255,0.7);
+}
