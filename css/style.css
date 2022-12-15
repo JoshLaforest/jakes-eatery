@@ -67,6 +67,7 @@ label {
     background-color: transparent;
     color: white;
     backdrop-filter: blur(2px);
+    margin: 0 0 0 .3em;
 }
 
 input:focus,
@@ -292,30 +293,30 @@ input:active {
 
 .fb {
     color: skyblue;
+    background-color: rgb(24, 31, 34);
 }
 
 .tw {
     color: yellow;
+    background-color: rgb(37, 37, 21);
 }
 
 .ig {
     color: red;
+    background-color: rgb(43, 22, 22);
 }
 
 .fb:hover {
-    background-color: rgb(24, 31, 34);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px 0 rgb(122, 176, 197, 0.7); 
 }
 
 .tw:hover {
-    background-color: rgb(37, 37, 21);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px 0 rgb(117, 117, 17);
 }
 
 .ig:hover {
-    background-color: rgb(43, 22, 22);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px 0 rgb(153, 18, 18);
 }
