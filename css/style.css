@@ -37,9 +37,7 @@ p {
     font-weight: 700;
     border: solid 1px rgba(255,255,255,0.3);
     color: white;
-    background:
-    linear-gradient(to right, rgba(22, 7, 7, 0.8), rgba(12, 1, 1, 0.377)),  
-    url(../images/specials-image.jpg) no-repeat center;
+    background-color: rgb(163, 11, 11);
     background-size: cover;
     backdrop-filter: blur(5px);
 }
@@ -58,6 +56,10 @@ label {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
 .field {
     padding: .6em .3em;
     border-radius: .8em;
@@ -67,8 +69,8 @@ label {
     backdrop-filter: blur(2px);
 }
 
-.field:focus,
-.field:active {
+input:focus,
+input:active {
     border: solid 2px #FF6666;
 }
 
@@ -128,7 +130,6 @@ label {
     padding: 1em 2em;
     border-radius: 1.2em;
     transition: 
-        background-color ease .4s,
         transform ease .4s,
         box-shadow ease .4s;
 }
@@ -154,26 +155,24 @@ label {
 }
 
 .btn-primary {
-    background-color: transparent;
+    background-color: rgb(43, 22, 22);
     color: #FF6666;
     border: solid 2px #FF6666;
 }
 
 .btn-primary:hover {
-    background-color: rgb(43, 22, 22);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px 0 rgb(153, 18, 18);
     cursor: pointer;
 }
 
 .btn-secondary {
-    background-color: transparent;
+    background-color: rgb(24, 31, 34);
     color: white;
     border: solid 2px rgba(255,255,255,0.6);
 }
 
 .btn-secondary:hover {
-    background-color: rgb(24, 31, 34);
     transform: translateY(-2px);
     box-shadow: 0 6px 16px 0 rgb(122, 176, 197, 0.7);
     cursor: pointer;
